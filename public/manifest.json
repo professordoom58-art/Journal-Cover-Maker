@@ -1,0 +1,18 @@
+{
+  "name": "Journal Cover Studio",
+  "short_name": "CoverStudio",
+  "description": "Design print-ready wrap-around journal covers and A4 sheets at 300 DPI",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F6F5F2",
+  "theme_color": "#B85D43",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

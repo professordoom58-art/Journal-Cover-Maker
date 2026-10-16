@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+    <rect width="400" height="400" fill="#fbcfe8" stroke="#db2777" stroke-width="16"/>
+    <text x="200" y="200" font-family="sans-serif" font-size="24" font-weight="bold" fill="#db2777" text-anchor="middle" dominant-baseline="middle">SQUARE (1:1)</text>
+  </svg>

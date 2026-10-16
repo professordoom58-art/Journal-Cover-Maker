@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #F6F5F2;
+    @apply text-stone-800 antialiased font-sans;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  .dark body {
+    background-color: #0c0a09;
+    color: #f5f5f4;
+  }
+
+  ::selection {
+    background-color: #b85d43;
+    color: #ffffff;
+  }
+
+  /* Prevent iOS Safari from auto-zooming into inputs */
+  @media (max-width: 640px) {
+    input[type="text"],
+    input[type="number"],
+    input[type="search"],
+    select,
+    textarea {
+      font-size: 16px !important;
+    }
+  }
+}
+
+/* Range Slider Styling: Thick, touch-friendly draggable thumb */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: #e7e5e4;
+}
+
+.dark input[type="range"]::-webkit-slider-runnable-track {
+  background: #292524;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background: #c2593f;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  margin-top: -8px;
+  transition: transform 0.1s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(1.15);
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background: #c2593f;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: transform 0.1s ease;
+}
+
+input[type="range"]::-moz-range-thumb:active {
+  transform: scale(1.15);
+}
+
+/* Subtle Canvas Dot Grid for Studio Workspace - Consistent neutral gray in both themes */
+.canvas-dot-grid {
+  background-color: #ECEAE4;
+  background-image: radial-gradient(#D5D2C9 1.1px, transparent 1.1px);
+  background-size: 18px 18px;
+}
+
+/* Checkered background for transparent photo previews */
+.checker-bg {
+  background-color: #f5f5f4;
+  background-image: 
+    linear-gradient(45deg, #e7e5e4 25%, transparent 25%), 
+    linear-gradient(-45deg, #e7e5e4 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #e7e5e4 75%), 
+    linear-gradient(-45deg, transparent 75%, #e7e5e4 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+}
+
+/* Custom Minimal Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6d3d1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #44403c;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a29e;
+}
+
+/* Print styling */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+  body {
+    background: white !important;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
